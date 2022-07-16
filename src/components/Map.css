@@ -1,0 +1,9 @@
+.map-container { 
+  position: absolute;
+  width: 79%;
+  height: 95vh;
+  right: 30px;
+  top: 30px;
+  background: #FFFFFF;
+  border-radius: 25px;
+}

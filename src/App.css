@@ -1,5 +1,19 @@
 .background {
   width: 100%;
   height: 100vh;
-  background-color: #232442;
+  background-color: var(--main-bg-color);
+}
+
+.app-title {
+  position: absolute;
+  width: 321px;
+  height: 52px;
+  left: 0px;
+  top: 30px;
+
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 48px;
+  text-align: center;
+  color: var(--font-color-white);
 }

@@ -19,14 +19,13 @@ const Map = () => {
     // Important! Always set the container height explicitly
     <div className='map-container'>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'AIzaSyD01EUhFWd-aJOG8XB6Ch67kvNkZGUY1GY' , libraries: ['places']}}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGE_MAP_KEY as string , libraries: ['places']}}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <AnyReactComponent
+        <Marker
           lat={37.201386194163}
           lng={127.11778019828}
-          text="My Marker"
         />
       </GoogleMapReact>
     </div>

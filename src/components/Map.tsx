@@ -3,6 +3,8 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker'
 import './Map.css'
 
+const AnyReactComponent = ({ text, lat, lng }: {text: string; lat: number; lng: number}) => <div style={{width: '100px', height: '100px', backgroundColor: 'white'}}>{text}</div>;
+
 const defaultProps = {
   center: {
     lat: 37.201386194163,
@@ -17,10 +19,15 @@ const Map = () => {
     // Important! Always set the container height explicitly
     <div className='map-container'>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGE_MAP_KEY as string }}
+        bootstrapURLKeys={{ key: 'AIzaSyD01EUhFWd-aJOG8XB6Ch67kvNkZGUY1GY' , libraries: ['places']}}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
+        <AnyReactComponent
+          lat={37.201386194163}
+          lng={127.11778019828}
+          text="My Marker"
+        />
       </GoogleMapReact>
     </div>
   );

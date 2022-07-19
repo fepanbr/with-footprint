@@ -3,8 +3,6 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker'
 import './Map.css'
 
-const AnyReactComponent = ({ text, lat, lng }: {text: string; lat: number; lng: number}) => <div style={{width: '100px', height: '100px', backgroundColor: 'white'}}>{text}</div>;
-
 const defaultProps = {
   center: {
     lat: 37.201386194163,
